@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stefanus Albert Welong</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marcellus|Cinzel|DM Serif Display">
+    <link rel="icon" href="photos/red_circle/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="photos/red_circle/favicon.ico" type="image/x-icon">
+    <!-- Internal CSS choice for short styling requirement page-->
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #d0d47f, #a4b273);
+            color: #000;
+            /* display: flex; */
+            flex-direction: column;
+            align-items: left;
+            justify-content: space-between;
+            min-height: 100vh;
+            transition: background-color 0.5s ease;
+        }
+
+        nav {
+            background-color: transparent;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding: 10px 0;
+            top: 0;
+        }
+
+        nav a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 0;
+            text-decoration: none;
+            width: 20%;
+            box-sizing: border-box;
+            transition: background-color 1.3s, color 1.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #333;
+        }
+
+        nav a.active {
+            background-color: #d55c4a;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            text-align: center;
+            font-family: "Marcellus", sans-serif;
+        }
+
+        h1.a {
+            font-family: "Marcellus", sans-serif;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header><a href="index.html" style="color: black; text-decoration: none;">Stefanus Albert Welong</a></header>
+    <nav>
+        <a class="active" href="main.html">Home</a>
+        <a href="ref1.html">Reflection 1</a>
+    </nav>
+    <header>
+    <h1> CHI204 - Stefanus Albert Welong</h1>
+    <h5> Click on Reflection 1 to see the semester's first reflection</h5>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetPage = this.getAttribute('href');
+
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => {
+                        window.location.href = targetPage;
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

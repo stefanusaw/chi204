@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CHI204 Stefanus Welong</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marcellus|Cinzel|DM Serif Display">
+    <link rel="icon" href="photos/red_circle/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="shortcut icon" href="photos/red_circle/favicon.ico" type="image/x-icon">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #7fa7d4, #7393b2);
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: space-between;
+        min-height: 100vh;
+        transition: background-color 0.5s ease;
+    }
+
+    nav {
+        background-color: transparent;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px 0;
+        top: 0;
+    }
+
+    nav a {
+        display: block;
+        color: #000;
+        text-align: center;
+        padding: 14px 0;
+        text-decoration: none;
+        width: 20%;
+        box-sizing: border-box;
+        transition: background-color 1.3s, color 1.3s;
+    }
+
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #333;
+    }
+
+    nav a.active {
+        background-color: #d55c4a;
+        color: white;
+    }
+
+    header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px;
+        /* margin: auto; */
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2em;
+        text-align: left;
+        font-family: "Marcellus", sans-serif;
+    }
+
+    h1.a {
+        font-family: "Marcellus", sans-serif;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 10px;
+        border-top: 2px solid #868282;
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .footer a {
+        color: #fbfbfb;
+        text-decoration: none;
+        margin: 0 30px;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    .fade-out {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+</style>
+
+<body>
+    <header><a href="index.html" style="color: black; text-decoration: none;">Stefanus Albert Welong</a></header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="ref1.html">Reflection 1</a>
+    </nav>
+    <header>
+        <h1> CHI204 - Stefanus Albert Welong</h1>
+    </header>
+    <h1>Reflection 1</h1>
+    <h3>Discuss your learning objectives for this semester: how
+        do you plan to achieve them? You can think about why you chose this course. You can use the
+        learning outcomes listed in the syllabus for your reference.</h3>
+    <h4>My learning objective this semester is to be able to use the Chinese language for daily conversation
+        in order to prepare myself for the future in the case where I am interested to continue my further studies
+        in China. I want to be able to use the Chinese language to describe things and deliver ideas using the correct
+        grammatical structure. I also want to know more about the Chinese language on its own and the culture too. Last
+        but not least, I want to use this course as a way for me to have a supervised practice area so that I can
+        improve my skills faster. <br> <br> I can achieve all these by participating more in class, ask questions
+        whenever necessary, and try to use Mandarin in-class when talking to classmates and also to Chen 老师。
+    </h4>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetPage = this.getAttribute('href');
+
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => {
+                        window.location.href = targetPage;
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
